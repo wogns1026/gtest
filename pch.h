@@ -3,7 +3,8 @@
 // Header for standard system include files.
 //
 
-#pragma once
+#ifndef _PCH_H_
+#define _PCH_H_
 
 #include "gtest/gtest.h"
 #include <iostream>
@@ -14,3 +15,5 @@ int mulFunc(int, int);
 int divFunc(int, int);
 int factorialFunc(int);
 int combinationFunc(int, int);
+
+#endif
