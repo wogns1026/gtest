@@ -22,12 +22,16 @@ int divFunc(int a, int b) {
 	return a / b;
 }
 int factorialFunc(int n) {
+	int ans = 1;
 	if (n <= 1)
-		return 1;
-	return factorialFunc(n - 1) * n;
+		ans = 1;
+	else {
+		for (int i = n; i >= 1; i--) {
+			ans *= i;
+		}
+	}
+	return ans;
 }
 int combinationFunc(int n, int r) {
-	if (n == r || r == 0)
-		return 1;
-	return combinationFunc(n - 1, r - 1) + combinationFunc(n - 1, r);
+	return factorialFunc(n) / (factorialFunc(n - r) * factorialFunc(r));
 }
